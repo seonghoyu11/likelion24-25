@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    /*꽉 채우기*/
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    /*눌러도 색깔 검은색 유지*/
+}
+
+.container {
+    width: 960px; /*내용*/
+    margin: 0 auto;
+}
+
+/* navigation bar */
+nav {
+    height: 80px;
+    background-color: #87ceeb;
+    line-height: 80px;
+}
+
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+    /* 컨텐츠 없는 부분 막기 */
+}
+
+.nav-logo {
+    font-size: 30px;
+    float: left;
+    margin: 0;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-btn {
+    list-style-type: none;
+    margin: 0;
+}
+
+ul.nav-btn > li {
+    float: left;
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* header */
+
+.hd {
+    position: relative; 
+    /* 상대영역 */
+
+    height: 600px;
+    text-align: center;
+    /* 인라인 요소 가운데로 맞추기 */
+}
+
+.hd-title {
+    font-size: 80px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-top: 200px;
+    /* 패딩과 마진의 차이: margin: 헤더 전체 요소를 다른 요소에서 밀어내서 네비게이션과 분리됨*/
+    /* 패딩은 요소 안에서 컨텐츠 움직임  */
+}
+
+.hd-content {
+    font-size: 25px;
+}
+
+/* 가상 요소를 위에 덧씌워서 투명처리 */
+.hd:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 왼쪽 위에서부터 시작 */
+    width: 100%;
+    height: 100%;
+    /* 다 채우기 */
+    opacity: 0.5; /* 1일때 투명도 없음 */
+    background-image: url("./nowon.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* 중요한 선언 */
+.hd .container {
+    position: relative;
+    /* absolute가 차지하는 영역? */
+    color: black;
+}
+
+/* section */
+.sec{
+    text-align: center;
+    padding: 100px 0;
+    background-color: #68adf6;
+}
+
+.sec article {
+    /* 한줄로 배열 */
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+}
+
+.sec article:last-child {
+    margin-right: 0;
+    /* 마지막거에는 안넣음 */
+}
+
+.sec article img {
+    width: 100%;
+    height: auto;
+}
+
+.card-img {
+    /* 정사각형으로 자르기 */
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+
+.sec::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* footer */
+
+.ft {
+    padding: 15px;
+    text-align: center;
+    background-color: #40e0d0;
+    font-weight: bold;
+}
