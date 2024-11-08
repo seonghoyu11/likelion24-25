@@ -1,0 +1,24 @@
+h1 {
+    color: brown;
+}
+
+div ol {
+    color: purple
+}
+
+h2.original {
+    color: turquoise
+}
+
+p#original {
+    color: palevioletred
+}
+
+p {
+    .nanum-gothic-regular {
+        font-family: "Nanum Gothic", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+}
